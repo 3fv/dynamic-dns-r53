@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import * as AWS from "aws-sdk"
 import IP from "public-ip"
 import {getLogger, setLoggingProvider, Level, ILogger} from "@3fv/logger-proxy"
@@ -7,6 +9,11 @@ import {ConsoleAppender} from "@3fv/logger/appenders/console/ConsoleAppender"
 import Yargs from "yargs"
 import * as Path from 'path'
 import * as Fs from 'fs'
+
+const
+  //log = getLogger(__filename),
+  pkgJson = require(Path.resolve(__dirname, "package.json")),
+  name = pkgJson.name.split("/").pop()
 
 let
   level = Level.info,
@@ -27,7 +34,7 @@ function setupLogger(level:Level) {
     .getFactory()
   
   setLoggingProvider(factory.getLogger)
-  log = getLogger(__filename)
+  log = getLogger(name)
   
   debug = log.debug
   info = log.info
@@ -39,12 +46,9 @@ function setupLogger(level:Level) {
 setupLogger(level)
 
 const
-  //log = getLogger(__filename),
-  pkgJson = require(Path.resolve(__dirname, "package.json")),
-  name = pkgJson.name.split("/").pop(),
   argv = Yargs
     .scriptName(name)
-    .usage("package-app [args]")
+    .usage("$0 [args]")
     .option("verbose", {
       type: "boolean",
       default: false,

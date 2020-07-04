@@ -8,7 +8,7 @@
 	},
 	"dependencies": {
 		"@3fv/guard": "^1.4.6",
-		"@3fv/logger": "^1.1.12",
+		"@3fv/logger": "^1.1.13",
 		"@3fv/logger-proxy": "^1.0.2",
 		"public-ip": "^4.0.1",
 		"aws-sdk": "^2.709.0",
