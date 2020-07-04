@@ -1,10 +1,13 @@
 {
 	"name": "@3fv/dynamic-dns-r53",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"main": "index.js",
 	"license": "MIT",
 	"bin": {
 		"dynamic-dns-r53": "index.js"
+	},
+	"publishConfig": {
+		"access": "public"
 	},
 	"dependencies": {
 		"@3fv/guard": "^1.4.6",
