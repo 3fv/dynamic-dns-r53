@@ -64,4 +64,4 @@ Options:
 
 # Credits
 
-@jglanz - Jonathan Glanz
+[@jglanz](https://github.com/jglanz) Jonathan Glanz
