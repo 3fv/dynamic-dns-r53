@@ -1,0 +1,40 @@
+{
+	"name": "@3fv/dynamic-dns-r53",
+	"version": "1.0.0",
+	"main": "index.js",
+	"license": "MIT",
+	"bin": {
+		"dynamic-dns-r53": "index.js"
+	},
+	"dependencies": {
+		"@3fv/guard": "^1.4.6",
+		"@3fv/logger": "^1.1.12",
+		"@3fv/logger-proxy": "^1.0.2",
+		"public-ip": "^4.0.1",
+		"aws-sdk": "^2.709.0",
+		"lodash": "^4.17.15",
+		"yargs": "^15.4.0",
+		"typescript": "^4.0.0-beta"
+	},
+	"devDependencies": {
+		"@types/node": "^14.0.14",
+		"@types/lodash": "^4.14.157",
+		"@types/public-ip": "^3.1.0",
+		"@types/yargs": "^15.0.5",
+		"npm-run-all": "^4.1.5",
+		"jest": "^26.1.0",
+		"cross-env": "^7.0.2"
+	},
+	"scripts": {
+		"compile": "tsc -p tsconfig.json",
+		"compile:watch": "yarn compile -- -w",
+		"//build": "if [ ! -e index.d.ts ];then mkdir -p lib && cp package.json lib && tsc -b tsconfig.json ${TSC_OPTS}; fi",
+		"build": "mkdir -p lib && cp package.json lib && run-s compile",
+		"build:watch": "run-s build compile:watch",
+		"test": "jest",
+		"test:watch": "run-s build && run-p build-watch 'jest --watch'",
+		"clean": "if test -e lib;then; rm -Rf lib;fi",
+		"postversion": "./scripts/release.sh $npm_package_version",
+		"release": "yarn build  && yarn version --patch --non-interactive"
+	}
+}
