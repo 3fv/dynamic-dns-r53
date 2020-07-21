@@ -14,7 +14,7 @@
 		"@3fv/logger": "^1.1.13",
 		"@3fv/logger-proxy": "^1.0.2",
 		"aws-sdk": "^2.709.0",
-		"lodash": "^4.17.15",
+		"lodash": "^4.17.19",
 		"public-ip": "^4.0.1",
 		"yargs": "^15.4.0"
 	},
