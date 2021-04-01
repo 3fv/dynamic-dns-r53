@@ -9,23 +9,23 @@
   dependencies:
     lodash "^4.17.15"
 
-"@3fv/logger-proxy@^1.0.1":
-  version "1.0.1"
-  resolved "https://registry.npmjs.org/@3fv/logger-proxy/-/logger-proxy-1.0.1.tgz#34a2c4706daa00b8161e0d2c3fcbcbb51b789fd2"
-  integrity sha512-hYM/8IeCdmsvNJrgcMBkhTZaXPESofenjU3/sppjc2rH3VIwsgjuA3pkipkamHNEeLpAZDMVPQp+gfE7LoY1eg==
+"@3fv/logger-proxy@^1.0.11":
+  version "1.0.11"
+  resolved "https://registry.yarnpkg.com/@3fv/logger-proxy/-/logger-proxy-1.0.11.tgz#65329b121ad44f65b0bfd4b2e540213c375d1735"
+  integrity sha512-36dJ7yFdpVZIahjYQM6JabmyXLQSm422Ejfji5lAwOCkSCltuFU3FnEjE0vCtUw6bpRxk24PwPzYUigC3xHnOg==
 
 "@3fv/logger-proxy@^1.0.2":
   version "1.0.2"
   resolved "https://registry.npmjs.org/@3fv/logger-proxy/-/logger-proxy-1.0.2.tgz#d2a383ec52304cf72922c96c0e49a06bc3779ab8"
   integrity sha512-UVuXKaFwRTMtR9sOh/qgLXqzn7EBtodMbqW56ArdYF96poxkEQqblqst3ws8uchB55wyAoGsedD8GI+AUqcqzA==
 
-"@3fv/logger@^1.1.12":
-  version "1.1.12"
-  resolved "https://registry.npmjs.org/@3fv/logger/-/logger-1.1.12.tgz#7c45c13503de2704095b274172a34d11a69daf82"
-  integrity sha512-gvZTfgpZ2TUW/EDRzbPDu1fuk7nqfFHM1ZZz3EV+svmpFM31YjPmD7G+9rUcrj16BEOJZw5HiwarNN4zCQVGgQ==
+"@3fv/logger@^1.1.13":
+  version "1.1.24"
+  resolved "https://registry.yarnpkg.com/@3fv/logger/-/logger-1.1.24.tgz#5bd057b0893b6e23b126ccaba7197dc541809436"
+  integrity sha512-80i9UX7CMDqEWzrtce4lKLqJ3pHwr8CSk8D1n6vp+Yi/vXGAJA3v5Y0ypVOruPJnJC9d2WoI1e5xc41X9tUmAQ==
   dependencies:
     "@3fv/guard" "^1.4.6"
-    "@3fv/logger-proxy" "^1.0.1"
+    "@3fv/logger-proxy" "^1.0.11"
     "@3fv/prelude-ts" "^0.8.15"
     bluebird "^3.7.2"
     chalk "^4.1.0"
@@ -4122,9 +4122,9 @@ xregexp@^4.2.4:
     "@babel/runtime-corejs3" "^7.8.3"
 
 y18n@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.npmjs.org/y18n/-/y18n-4.0.0.tgz#95ef94f85ecc81d007c264e190a120f0a3c8566b"
-  integrity sha512-r9S/ZyXu/Xu9q1tYlpsLIsa3EeLXXk0VwlxqTcFRfg9EhMW+17kbt9G0NrgCmhGb5vT2hyhJZLfDGx+7+5Uj/w==
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/y18n/-/y18n-4.0.1.tgz#8db2b83c31c5d75099bb890b23f3094891e247d4"
+  integrity sha512-wNcy4NvjMYL8gogWWYAO7ZFWFfHcbdbE57tZO8e4cbpj8tfUcwrwqSl3ad8HxpYWCdXcJUCeKKZS62Av1affwQ==
 
 yargs-parser@^18.1.2:
   version "18.1.3"
