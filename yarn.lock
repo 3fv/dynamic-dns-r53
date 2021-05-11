@@ -2,6 +2,18 @@
 # yarn lockfile v1
 
 
+"@3fv/deferred@^1.2.4":
+  version "1.2.4"
+  resolved "https://registry.yarnpkg.com/@3fv/deferred/-/deferred-1.2.4.tgz#d16d280a26ea8ca7decf3b7a4b9beae8c0dd992f"
+  integrity sha512-G6U2MO/8MWGx7kNbk6TAK24I9/TZlJv1Wepb8LRT/sTjsvpqSH1ckCigxHlrPtpEpbsyYBQZjmof6SnzBi4+AA==
+
+"@3fv/guard@^1.4.24":
+  version "1.4.25"
+  resolved "https://registry.yarnpkg.com/@3fv/guard/-/guard-1.4.25.tgz#bbc69dfcf1cf1a52da56b44e260c8eab5749be3b"
+  integrity sha512-fnvBtsqciBeWNhFOFENKGvNbxq0rQGKaGukew6yjbh2T1gspc8FVm4k024/8k6CwK+jldxkoE5SaSaI6ndCP2A==
+  dependencies:
+    lodash "^4.17.15"
+
 "@3fv/guard@^1.4.6":
   version "1.4.6"
   resolved "https://registry.npmjs.org/@3fv/guard/-/guard-1.4.6.tgz#63f655ab7c5ddca7aa8fe4cca77b6ad9d6898f90"
@@ -9,23 +21,30 @@
   dependencies:
     lodash "^4.17.15"
 
-"@3fv/logger-proxy@^1.0.1":
-  version "1.0.1"
-  resolved "https://registry.npmjs.org/@3fv/logger-proxy/-/logger-proxy-1.0.1.tgz#34a2c4706daa00b8161e0d2c3fcbcbb51b789fd2"
-  integrity sha512-hYM/8IeCdmsvNJrgcMBkhTZaXPESofenjU3/sppjc2rH3VIwsgjuA3pkipkamHNEeLpAZDMVPQp+gfE7LoY1eg==
+"@3fv/logger-proxy@^1.0.11":
+  version "1.0.44"
+  resolved "https://registry.yarnpkg.com/@3fv/logger-proxy/-/logger-proxy-1.0.44.tgz#09ddb988970e716627484de0d0192867e8ce7a4c"
+  integrity sha512-eCRITSy8ISA7GJlSPpLbaRyRF4TVzPRG7z7b77xAm94TAy3a/nicQzcrLPoUPPHFHKVz5k93qAkvp4melURhpw==
+  dependencies:
+    "@3fv/deferred" "^1.2.4"
+    "@3fv/guard" "^1.4.24"
+    "@3fv/prelude-ts" "^0.8.23"
+    bluebird "^3.7.2"
+    debug "^4.3.1"
+    lodash "^4.17.21"
 
 "@3fv/logger-proxy@^1.0.2":
   version "1.0.2"
   resolved "https://registry.npmjs.org/@3fv/logger-proxy/-/logger-proxy-1.0.2.tgz#d2a383ec52304cf72922c96c0e49a06bc3779ab8"
   integrity sha512-UVuXKaFwRTMtR9sOh/qgLXqzn7EBtodMbqW56ArdYF96poxkEQqblqst3ws8uchB55wyAoGsedD8GI+AUqcqzA==
 
-"@3fv/logger@^1.1.12":
-  version "1.1.12"
-  resolved "https://registry.npmjs.org/@3fv/logger/-/logger-1.1.12.tgz#7c45c13503de2704095b274172a34d11a69daf82"
-  integrity sha512-gvZTfgpZ2TUW/EDRzbPDu1fuk7nqfFHM1ZZz3EV+svmpFM31YjPmD7G+9rUcrj16BEOJZw5HiwarNN4zCQVGgQ==
+"@3fv/logger@^1.1.13":
+  version "1.1.24"
+  resolved "https://registry.yarnpkg.com/@3fv/logger/-/logger-1.1.24.tgz#5bd057b0893b6e23b126ccaba7197dc541809436"
+  integrity sha512-80i9UX7CMDqEWzrtce4lKLqJ3pHwr8CSk8D1n6vp+Yi/vXGAJA3v5Y0ypVOruPJnJC9d2WoI1e5xc41X9tUmAQ==
   dependencies:
     "@3fv/guard" "^1.4.6"
-    "@3fv/logger-proxy" "^1.0.1"
+    "@3fv/logger-proxy" "^1.0.11"
     "@3fv/prelude-ts" "^0.8.15"
     bluebird "^3.7.2"
     chalk "^4.1.0"
@@ -40,6 +59,14 @@
   dependencies:
     hamt_plus "1.0.2"
     list "2.0.18"
+
+"@3fv/prelude-ts@^0.8.23":
+  version "0.8.23"
+  resolved "https://registry.yarnpkg.com/@3fv/prelude-ts/-/prelude-ts-0.8.23.tgz#ebd8a9d02056b1eb523593fcf214eb8dab29dadf"
+  integrity sha512-3LekY8BC88R65D1F7MekBF6hqh33DOPRUjC8IiYhz0o2O7FQCiDicAuyOOxQaMiA1xG1Y9kn729EzCpN1Jxv3w==
+  dependencies:
+    hamt_plus "1.0.2"
+    list "2.0.19"
 
 "@babel/code-frame@^7.0.0", "@babel/code-frame@^7.10.4":
   version "7.10.4"
@@ -1211,6 +1238,13 @@ debug@^4.1.0, debug@^4.1.1:
   dependencies:
     ms "^2.1.1"
 
+debug@^4.3.1:
+  version "4.3.1"
+  resolved "https://registry.yarnpkg.com/debug/-/debug-4.3.1.tgz#f0d229c505e0c6d8c49ac553d1b13dc183f6b2ee"
+  integrity sha512-doEwdvm4PCeK4K3RQN2ZC2BYUBaxwLARCqZmMjtF8a51J2Rb0xpVloFRnCODwqjpwnAoao4pelN8l3RJdv3gRQ==
+  dependencies:
+    ms "2.1.2"
+
 decamelize@^1.2.0:
   version "1.2.0"
   resolved "https://registry.npmjs.org/decamelize/-/decamelize-1.2.0.tgz#f6534d15148269b20352e7bee26f501f9a191290"
@@ -1784,9 +1818,9 @@ has@^1.0.3:
     function-bind "^1.1.1"
 
 hosted-git-info@^2.1.4:
-  version "2.8.8"
-  resolved "https://registry.npmjs.org/hosted-git-info/-/hosted-git-info-2.8.8.tgz#7539bd4bc1e0e0a895815a2e0262420b12858488"
-  integrity sha512-f/wzC2QaWBs7t9IYqB4T3sR1xviIViXJRJTWBlx2Gf3g0Xi5vI7Yy4koXQ1c9OYDGHN9sBy1DQ2AB8fqZBWhUg==
+  version "2.8.9"
+  resolved "https://registry.yarnpkg.com/hosted-git-info/-/hosted-git-info-2.8.9.tgz#dffc0bf9a21c02209090f2aa69429e1414daf3f9"
+  integrity sha512-mxIDAb9Lsm6DoOJ7xH+5+X4y1LU/4Hi50L9C5sIswK3JzULS4bwk1FvjdBgvYR4bzT4tuUQiC15FE2f5HbLvYw==
 
 html-encoding-sniffer@^2.0.1:
   version "2.0.1"
@@ -2633,6 +2667,11 @@ list@2.0.18:
   resolved "https://registry.npmjs.org/list/-/list-2.0.18.tgz#5865b95ab209038cb506e89da8e6f907eba0b8a3"
   integrity sha512-yggUtu2zHYKaamBmg8IqXSTJfmeNBEbwY2ODNoXi+Uuu/s7z5vPnp3aQJfEj860BZQR6pfByTIRvAhYFCGCa2A==
 
+list@2.0.19:
+  version "2.0.19"
+  resolved "https://registry.yarnpkg.com/list/-/list-2.0.19.tgz#370a3d7d3e24cfd5ced2c89cda2baf28e31e2830"
+  integrity sha512-nnVaRp4RaMAQkCpypTThsdxKqgPMiSwJq93eAm2/IbpUa8sd04XKBhkKu+bMk63HmdjK8b8Cuh4xARHWX2ye/Q==
+
 load-json-file@^4.0.0:
   version "4.0.0"
   resolved "https://registry.npmjs.org/load-json-file/-/load-json-file-4.0.0.tgz#2f5f45ab91e33216234fd53adab668eb4ec0993b"
@@ -2659,6 +2698,11 @@ lodash@^4.17.13, lodash@^4.17.15:
   version "4.17.15"
   resolved "https://registry.npmjs.org/lodash/-/lodash-4.17.15.tgz#b447f6670a0455bbfeedd11392eff330ea097548"
   integrity sha512-8xOcRHvCjnocdS5cpwXQXVzmmh5e5+saE2QGoeQmbKmRS6J3VQppPOIt0MnmE+4xlZoumy0GPG0D0MVIQbNA1A==
+
+lodash@^4.17.21:
+  version "4.17.21"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
+  integrity sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==
 
 lowercase-keys@^1.0.0, lowercase-keys@^1.0.1:
   version "1.0.1"
@@ -2785,9 +2829,9 @@ ms@2.0.0:
   resolved "https://registry.npmjs.org/ms/-/ms-2.0.0.tgz#5608aeadfc00be6c2901df5f9861788de0d597c8"
   integrity sha1-VgiurfwAvmwpAd9fmGF4jeDVl8g=
 
-ms@^2.1.1:
+ms@2.1.2, ms@^2.1.1:
   version "2.1.2"
-  resolved "https://registry.npmjs.org/ms/-/ms-2.1.2.tgz#d09d1f357b443f493382a8eb3ccd183872ae6009"
+  resolved "https://registry.yarnpkg.com/ms/-/ms-2.1.2.tgz#d09d1f357b443f493382a8eb3ccd183872ae6009"
   integrity sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==
 
 mz@^2.7.0:
